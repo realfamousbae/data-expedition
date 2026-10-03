@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="214" viewBox="0 0 1000 214" role="img" aria-label="Рамка &gt; Глубина &gt; Карта &gt; Поиск &gt; Журнал &gt; Проверка &gt; Насыщение &gt; Самоаудит &gt; Отчёт">
+<rect width="1000" height="214" rx="16" fill="#0b0f0c"/>
+<text x="500.0" y="34" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#93a99a" text-anchor="middle">От вопроса до ответа с доказательствами</text>
+<line x1="62" y1="126" x2="938" y2="126" stroke="#2f6b22" stroke-width="2"/>
+<path d="M609.5 102 C609.5 64 390.5 64 390.5 102" fill="none" stroke="#55c23a" stroke-width="1.6" stroke-dasharray="4 4"/>
+<path d="M386.5 95 L390.5 102 L395.5 95" fill="none" stroke="#55c23a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500.0" y="64" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#55c23a" text-anchor="middle">повторять до насыщения</text>
+<circle cx="62.0" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="62.0" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">1</text>
+<text x="62.0" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Рамка</text>
+<circle cx="171.5" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="171.5" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">2</text>
+<text x="171.5" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Глубина</text>
+<circle cx="281.0" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="281.0" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">3</text>
+<text x="281.0" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Карта</text>
+<circle cx="390.5" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="390.5" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">4</text>
+<text x="390.5" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Поиск</text>
+<circle cx="500.0" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="500.0" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">5</text>
+<text x="500.0" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Журнал</text>
+<circle cx="609.5" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="609.5" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">6</text>
+<text x="609.5" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Проверка</text>
+<circle cx="719.0" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="719.0" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">7</text>
+<text x="719.0" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Насыщение</text>
+<circle cx="828.5" cy="126" r="19" fill="#111a13" stroke="#55c23a" stroke-width="2"/>
+<text x="828.5" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#55c23a" text-anchor="middle">8</text>
+<text x="828.5" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Самоаудит</text>
+<circle cx="938.0" cy="126" r="19" fill="#55c23a" stroke="#55c23a" stroke-width="2"/>
+<text x="938.0" y="131.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0b0f0c" text-anchor="middle">9</text>
+<text x="938.0" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#e9f1ea" text-anchor="middle">Отчёт</text>
+</svg>

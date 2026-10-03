@@ -16,6 +16,7 @@ Thanks for helping improve Data Expedition. This repository ships one skill, so 
 pip install pyyaml
 python scripts/build_skill.py --check   # validate
 python scripts/build_skill.py           # validate and rebuild dist/data-expedition.skill
+python scripts/make_graphics.py         # regenerate assets/*.svg after editing their texts
 ```
 
 1. Edit files under `skills/data-expedition/`.

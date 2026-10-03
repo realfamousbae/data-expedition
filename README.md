@@ -1,12 +1,35 @@
 <p align="center">
-  <img src="assets/banner.webp" alt="Data Expedition" width="720">
+  <img src="assets/banner.webp" alt="Data Expedition" width="640">
 </p>
 
-# Data Expedition
+<h1 align="center">Data Expedition</h1>
 
-**A Claude skill for deep investigation: it carries a task all the way to a detailed, evidence-backed answer.**
+<p align="center">
+  <b>Deep investigation for Claude Opus and Fable.</b><br>
+  Repositories, the web, and facts, carried through to a detailed, evidence-backed answer.
+</p>
 
-*Read this in [Russian / Русский](README.ru.md).*
+<p align="center">
+  <a href="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml"><img alt="CI" src="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-55c23a?labelColor=1b2a1f"></a>
+  <img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Frealfamousbae/data-expedition%2Fmaster%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&color=55c23a&labelColor=1b2a1f">
+  <img alt="models" src="https://img.shields.io/badge/models-Opus%20%C2%B7%20Fable-55c23a?labelColor=1b2a1f">
+  <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-55c23a?labelColor=1b2a1f">
+</p>
+
+<p align="center">
+  <a href="#installation"><b>Install</b></a> &middot;
+  <a href="#usage"><b>Usage</b></a> &middot;
+  <a href="README.ru.md"><b>Русский</b></a> &middot;
+  <a href="CONTRIBUTING.md"><b>Contributing</b></a> &middot;
+  <a href="SECURITY.md"><b>Security</b></a>
+</p>
+
+<p align="center">
+  <img src="assets/cards.svg" alt="Workspace, Web, Verify, Report" width="900">
+</p>
+
+---
 
 Data Expedition makes Claude work like a careful investigator instead of a fast summarizer. It targets **Claude Opus and Fable** class models, which have the autonomy, tool use, and reasoning depth to run long investigations without hand-holding.
 
@@ -41,9 +64,9 @@ If you have already invoked it on a small task, say "scout" (or "just answer dir
 
 ## How it works
 
-```
-Frame ─► Depth tier ─► Map ─► Explore ─► Ledger ─► Verify ─► Saturate ─► Self-audit ─► Report
-```
+<p align="center">
+  <img src="assets/workflow.svg" alt="Frame, Depth tier, Map, Explore, Ledger, Verify, Saturate, Self-audit, Report" width="900">
+</p>
 
 1. **Frame**: restate the question, scope, deliverable, and concrete "done" criteria. Ask the user only when blocked.
 2. **Depth tier**: *Scout* (quick), *Survey* (default), *Expedition* (exhaustive). Effort matches stakes.
@@ -122,9 +145,11 @@ skills/data-expedition/
   evals/
     evals.json                Task evals
     trigger-evals.json        Description-triggering queries
-assets/banner.webp             Project banner
+assets/                       Banner and README graphics (generated SVGs)
 dist/data-expedition.skill    Prebuilt package for claude.ai
 scripts/build_skill.py        Validate and build the .skill package
+scripts/make_graphics.py      Regenerate the README SVG graphics
+SECURITY.md                   Security policy
 ```
 
 ## Development

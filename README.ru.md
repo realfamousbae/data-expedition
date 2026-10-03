@@ -1,12 +1,35 @@
 <p align="center">
-  <img src="assets/banner.webp" alt="Data Expedition" width="720">
+  <img src="assets/banner.webp" alt="Data Expedition" width="640">
 </p>
 
-# Data Expedition
+<h1 align="center">Data Expedition</h1>
 
-**Skill для Claude: глубокое расследование, которое доводит задачу до подробного ответа, подкреплённого доказательствами.**
+<p align="center">
+  <b>Глубокое расследование для Claude Opus и Fable.</b><br>
+  Репозитории, веб и факты: до подробного ответа с доказательствами.
+</p>
 
-*[English version](README.md)*
+<p align="center">
+  <a href="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml"><img alt="CI" src="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-55c23a?labelColor=1b2a1f"></a>
+  <img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Frealfamousbae/data-expedition%2Fmaster%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&color=55c23a&labelColor=1b2a1f">
+  <img alt="models" src="https://img.shields.io/badge/models-Opus%20%C2%B7%20Fable-55c23a?labelColor=1b2a1f">
+  <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-55c23a?labelColor=1b2a1f">
+</p>
+
+<p align="center">
+  <a href="#установка"><b>Установка</b></a> &middot;
+  <a href="#использование"><b>Использование</b></a> &middot;
+  <a href="README.md"><b>English</b></a> &middot;
+  <a href="CONTRIBUTING.md"><b>Contributing</b></a> &middot;
+  <a href="SECURITY.md"><b>Безопасность</b></a>
+</p>
+
+<p align="center">
+  <img src="assets/cards.ru.svg" alt="Workspace, Web, Проверка, Отчёт" width="900">
+</p>
+
+---
 
 Data Expedition заставляет Claude работать как внимательный исследователь, а не как быстрый «пересказчик». Skill рассчитан на модели класса **Claude Opus и Fable**: у них достаточно автономности, навыков работы с инструментами и глубины рассуждений, чтобы вести долгие расследования без подсказок.
 
@@ -41,9 +64,9 @@ Data Expedition заставляет Claude работать как внимат
 
 ## Как это работает
 
-```
-Рамка ─► Уровень глубины ─► Карта ─► Исследование ─► Журнал ─► Проверка ─► Насыщение ─► Самоаудит ─► Отчёт
-```
+<p align="center">
+  <img src="assets/workflow.ru.svg" alt="Рамка, Глубина, Карта, Поиск, Журнал, Проверка, Насыщение, Самоаудит, Отчёт" width="900">
+</p>
 
 1. **Рамка**: переформулировать вопрос, границы, формат результата и конкретные критерии «готово». Вопросы пользователю — только если без них не обойтись.
 2. **Уровень глубины**: *Scout* (быстро), *Survey* (по умолчанию), *Expedition* (исчерпывающе). Усилия соответствуют ставкам.
@@ -122,9 +145,11 @@ skills/data-expedition/
   evals/
     evals.json                Тестовые задачи
     trigger-evals.json        Запросы для проверки срабатывания описания
-assets/banner.webp             Баннер проекта
+assets/                       Баннер и графика README (генерируемые SVG)
 dist/data-expedition.skill    Готовый пакет для claude.ai
 scripts/build_skill.py        Валидация и сборка пакета .skill
+scripts/make_graphics.py      Пересборка SVG-графики README
+SECURITY.md                   Политика безопасности
 ```
 
 ## Разработка

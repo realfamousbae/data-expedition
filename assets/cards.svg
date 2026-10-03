@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="214" viewBox="0 0 1000 214" role="img" aria-label="Workspace, Web, Verify, Report">
+<rect width="1000" height="214" rx="16" fill="#0b0f0c"/>
+<rect x="8.0" y="14" width="240" height="186" rx="12" fill="#111a13" stroke="#23422b"/>
+<circle cx="48.0" cy="64" r="24" fill="#16261a" stroke="#2f6b22"/>
+<g fill="none" stroke="#55c23a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="48.0" cy="55" r="4"/><circle cx="38.0" cy="73" r="4"/><circle cx="58.0" cy="73" r="4"/><path d="M46.0 59 L40.0 69 M50.0 59 L56.0 69"/></g>
+<text x="84.0" y="71" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e9f1ea" text-anchor="start">Workspace</text>
+<circle cx="32.0" cy="110" r="2.6" fill="#55c23a"/>
+<text x="44.0" y="114" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Architecture and data flow</text>
+<circle cx="32.0" cy="135" r="2.6" fill="#55c23a"/>
+<text x="44.0" y="139" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Audits: security, deps, drift</text>
+<circle cx="32.0" cy="160" r="2.6" fill="#55c23a"/>
+<text x="44.0" y="164" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Git history, logs, datasets</text>
+<rect x="256.0" y="14" width="240" height="186" rx="12" fill="#111a13" stroke="#23422b"/>
+<circle cx="296.0" cy="64" r="24" fill="#16261a" stroke="#2f6b22"/>
+<g fill="none" stroke="#55c23a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="296.0" cy="64" r="13"/><ellipse cx="296.0" cy="64" rx="6" ry="13"/><path d="M283.0 64 H309.0"/></g>
+<text x="332.0" y="71" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e9f1ea" text-anchor="start">Web</text>
+<circle cx="280.0" cy="110" r="2.6" fill="#55c23a"/>
+<text x="292.0" y="114" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Archives, primary documents</text>
+<circle cx="280.0" cy="135" r="2.6" fill="#55c23a"/>
+<text x="292.0" y="139" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Registries, filings, forums</text>
+<circle cx="280.0" cy="160" r="2.6" fill="#55c23a"/>
+<text x="292.0" y="164" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Deep but public pages</text>
+<rect x="504.0" y="14" width="240" height="186" rx="12" fill="#111a13" stroke="#23422b"/>
+<circle cx="544.0" cy="64" r="24" fill="#16261a" stroke="#2f6b22"/>
+<g fill="none" stroke="#55c23a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M544.0 50 L556.0 55 V66 C556.0 73 550.0 77 544.0 79 C538.0 77 532.0 73 532.0 66 V55 Z"/><path d="M539.0 65 L543.0 69 L550.0 60"/></g>
+<text x="580.0" y="71" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e9f1ea" text-anchor="start">Verify</text>
+<circle cx="528.0" cy="110" r="2.6" fill="#55c23a"/>
+<text x="540.0" y="114" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Verdict for every claim</text>
+<circle cx="528.0" cy="135" r="2.6" fill="#55c23a"/>
+<text x="540.0" y="139" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Independent corroboration</text>
+<circle cx="528.0" cy="160" r="2.6" fill="#55c23a"/>
+<text x="540.0" y="164" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Calibrated confidence</text>
+<rect x="752.0" y="14" width="240" height="186" rx="12" fill="#111a13" stroke="#23422b"/>
+<circle cx="792.0" cy="64" r="24" fill="#16261a" stroke="#2f6b22"/>
+<g fill="none" stroke="#55c23a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M783.0 50 H795.0 L802.0 57 V78 H783.0 Z"/><path d="M788.0 64 H797.0 M788.0 70 H797.0"/></g>
+<text x="828.0" y="71" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e9f1ea" text-anchor="start">Report</text>
+<circle cx="776.0" cy="110" r="2.6" fill="#55c23a"/>
+<text x="788.0" y="114" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Bottom line first</text>
+<circle cx="776.0" cy="135" r="2.6" fill="#55c23a"/>
+<text x="788.0" y="139" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400" fill="#93a99a" text-anchor="start">path:line and dated URLs</text>
+<circle cx="776.0" cy="160" r="2.6" fill="#55c23a"/>
+<text x="788.0" y="164" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#93a99a" text-anchor="start">Coverage and honest limits</text>
+</svg>
