@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.webp" alt="Data Expedition" width="640">
-</p>
-
 <h1 align="center">Data Expedition</h1>
 
 <p align="center">
@@ -63,10 +59,6 @@ Deep tasks fail in predictable ways: stopping at the first plausible answer, sum
 If you have already invoked it on a small task, say "scout" (or "just answer directly") and it will keep the work minimal.
 
 ## How it works
-
-<p align="center">
-  <img src="assets/workflow.svg" alt="Frame, Depth tier, Map, Explore, Ledger, Verify, Saturate, Self-audit, Report" width="900">
-</p>
 
 1. **Frame**: restate the question, scope, deliverable, and concrete "done" criteria. Ask the user only when blocked.
 2. **Depth tier**: *Scout* (quick), *Survey* (default), *Expedition* (exhaustive). Effort matches stakes.
