@@ -1,0 +1,21 @@
+{
+  "name": "data-expedition",
+  "owner": {
+    "name": "realfamousbae",
+    "url": "https://github.com/realfamousbae"
+  },
+  "metadata": {
+    "description": "Data Expedition: a deep investigation skill for Claude Opus and Fable."
+  },
+  "plugins": [
+    {
+      "name": "data-expedition",
+      "source": "./",
+      "description": "Deep, evidence-backed investigation: exhaustive repository analysis and audits, deep web research, and rigorous fact-checking, carried through to a detailed answer.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "category": "research",
+      "keywords": ["research", "fact-checking", "code-audit", "repository-analysis", "verification"]
+    }
+  ]
+}

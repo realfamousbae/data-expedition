@@ -1,0 +1,22 @@
+name: Validate skill
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml
+      - name: Validate skill and manifests
+        run: python scripts/build_skill.py --check
+      - name: Check the prebuilt .skill file is up to date
+        run: |
+          python scripts/build_skill.py
+          git diff --exit-code -- dist/data-expedition.skill || \
+            (echo "dist/data-expedition.skill is stale; run python scripts/build_skill.py and commit" && exit 1)

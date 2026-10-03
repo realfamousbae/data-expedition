@@ -1,0 +1,88 @@
+{
+  "skill_name": "data-expedition",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Investigate how authentication works in this repository end to end: where credentials enter, how sessions or tokens are created and validated, what protects each route, and anything that looks wrong. I want file and line references for everything.",
+      "expected_output": "A structured walkthrough from entry point to enforcement with path:line locators, a note of dynamic or config-driven wiring, findings labeled observed vs inferred, explicit coverage and limits, bottom line first.",
+      "files": [],
+      "expectations": [
+        "Starts with a bottom line before the details",
+        "Every material claim carries a path:line locator",
+        "Observed facts are separated from inferences",
+        "States which directories and file types were covered and what was not examined",
+        "Searches name variants and non-code references (config, env vars) rather than a single grep",
+        "Does not modify any repository files"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Do a full audit of this workspace: security, dependency health, docs-versus-code drift, and dead code. Be exhaustive and don't stop at the obvious stuff.",
+      "expected_output": "An audit report with a findings summary table (severity and confidence as separate columns), per-finding location, impact, evidence, fix, and a coverage section listing audit types run and areas skipped. Secrets masked.",
+      "files": [],
+      "expectations": [
+        "Uses the Expedition tier behavior: coverage matrix and per-area status",
+        "Findings table has severity and confidence as separate fields",
+        "Each finding has location, evidence, impact, and a concrete fix",
+        "Any secret found is masked in the output",
+        "Includes a section of negative results with the patterns searched",
+        "Absence claims are phrased as search results, not as proof of nonexistence"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Fact-check this claim and go as deep as you can: \"The Great Wall of China is visible from space with the naked eye.\" Find where it originated, the strongest evidence on both sides, and give me a verdict.",
+      "expected_output": "A fact-check verdict with decomposed claim parts (low Earth orbit vs. the Moon, naked eye vs. aided), primary or authoritative sources (space agency statements, astronaut accounts), the earliest origin of the myth, a verdict label with confidence, and listed limits.",
+      "files": [],
+      "expectations": [
+        "Decomposes the claim into parts such as orbit altitude and unaided vs. aided viewing",
+        "Cites primary or authoritative sources with URL and retrieval date",
+        "Traces the earliest known origin of the claim",
+        "Gives a verdict label with a calibrated confidence term",
+        "Reports the strongest contrary evidence and how it was weighed",
+        "Notes limits of what could be verified"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Research the history of the website at example-old-docs.invalid/guide: it was deleted, and I need to know what it said in 2019, when it disappeared, and whether any other pages or documents still carry its content. Dig into archives and anywhere else it might survive.",
+      "expected_output": "A dossier that uses web archives (capture timestamps), site structure and related documents, reports clearly what could and could not be recovered, logs the routes tried, and states reliability of recovered content. Honest about the placeholder domain not resolving.",
+      "files": [],
+      "expectations": [
+        "Checks web archive captures and reports capture timestamps rather than only URLs",
+        "Tries multiple recovery routes (archive snapshots, feeds or sitemaps, mentions elsewhere)",
+        "Does not fabricate page content that could not be retrieved",
+        "Includes a search log of routes tried and dead ends",
+        "Clearly separates recovered text from inference",
+        "Does not attempt to bypass logins or paywalls"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Check whether the dependencies pinned in this repo have known vulnerabilities or have been abandoned upstream, and tell me which ones I should actually worry about.",
+      "expected_output": "Hybrid-mode result: resolved versions from lockfiles, upstream advisory lookups with sources and dates, maintenance status evidence, a prioritized list with reachability reasoning, and an as-of date.",
+      "files": [],
+      "expectations": [
+        "Uses resolved versions from lockfiles, not only manifest ranges",
+        "Cites advisory sources with identifiers and retrieval dates",
+        "Gives an as-of date for the findings",
+        "Distinguishes vulnerable-in-principle from reachable-in-this-codebase",
+        "Prioritizes the results and explains why",
+        "Reports dependencies it could not check and why"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Why did the number of retries in the config change from 3 to 5 last spring? Find the real reason, not a guess.",
+      "expected_output": "History-based answer using git blame/log and linked issues or PRs, distinguishing stated intent from inference, with commit hashes, and honest about unrecoverable intent if the history is thin.",
+      "files": [],
+      "expectations": [
+        "Uses git history (blame or log) with commit hashes cited",
+        "Separates stated intent from inference",
+        "Looks for linked issues, PRs, or docs for the rationale",
+        "If intent cannot be recovered, says so and gives a labeled best explanation",
+        "Gives the answer with a calibrated confidence term"
+      ]
+    }
+  ]
+}

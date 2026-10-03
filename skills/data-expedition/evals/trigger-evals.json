@@ -1,0 +1,22 @@
+[
+  {"query": "can you go through our monorepo and map out which services talk to the billing service, both direct calls and via the queue? I need to know before we change the invoice schema. include file refs", "should_trigger": true},
+  {"query": "audit this repo properly - secrets, outdated deps, anything sketchy in the GitHub Actions workflows. don't just run a linter and call it done", "should_trigger": true},
+  {"query": "i keep seeing the stat that 'we only use 10% of our brains' in blog posts. fact check it thoroughly and find where it started, with real sources not listicles", "should_trigger": true},
+  {"query": "найди всё, что можно узнать про компанию ООО «Ромашка Групп»: учредители, суды, закупки, старые версии сайта. копай глубоко, не останавливайся на первой странице гугла", "should_trigger": true},
+  {"query": "this old docs page got deleted years ago (docs.vendorx.com/legacy/api-v1). figure out what it said and whether the content survives anywhere, archives, mirrors, PDFs, forum posts, whatever", "should_trigger": true},
+  {"query": "I need a deep dive on why our nightly export job sometimes writes duplicate rows. trace the whole path from the scheduler to the DB insert and tell me the actual root cause, not a guess", "should_trigger": true},
+  {"query": "verify these 12 statistics from the draft in ./report_draft.md against primary sources. flag anything misattributed, outdated, or misleading, and give me confidence levels", "should_trigger": true},
+  {"query": "проанализируй репозиторий целиком: архитектура, связи между модулями, мёртвый код, расхождения между README и реальным поведением. хочу подробный отчёт со ссылками на строки", "should_trigger": true},
+  {"query": "research everything publicly available about the failure of this open-source library's 3.x migration: github issues, mailing list threads, changelogs, blog posts, conference talks. go as deep as you can and give me a sourced timeline", "should_trigger": true},
+  {"query": "which paper first made this claim about transformer scaling? trace the citation chain back to the origin, check whether it was ever retracted or contradicted, and tell me how sure you are", "should_trigger": true},
+  {"query": "what's the syntax for a Python list comprehension with an if/else?", "should_trigger": false},
+  {"query": "rename the function getUser to fetchUser everywhere in src/ and update the tests", "should_trigger": false},
+  {"query": "what's the capital of Australia?", "should_trigger": false},
+  {"query": "write a README for this project based on the code", "should_trigger": false},
+  {"query": "summarize this PDF I attached into five bullet points", "should_trigger": false},
+  {"query": "fix the failing unit test in tests/test_parser.py", "should_trigger": false},
+  {"query": "give me a quick pros and cons list of Postgres vs MySQL for a small blog", "should_trigger": false},
+  {"query": "open the repo and tell me what language it's written in and how to run it", "should_trigger": false},
+  {"query": "translate this paragraph to Spanish and make it sound more formal", "should_trigger": false},
+  {"query": "is the CI green on my PR right now?", "should_trigger": false}
+]

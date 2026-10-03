@@ -1,0 +1,22 @@
+{
+  "name": "data-expedition",
+  "version": "1.0.0",
+  "description": "Deep, evidence-backed investigation for Claude Opus and Fable: exhaustive repository and workspace analysis, audits, deep web research, and rigorous fact-checking, carried through to a detailed answer.",
+  "author": {
+    "name": "realfamousbae",
+    "url": "https://github.com/realfamousbae"
+  },
+  "homepage": "https://github.com/realfamousbae/data-expedition",
+  "repository": "https://github.com/realfamousbae/data-expedition",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "deep-research",
+    "fact-checking",
+    "code-audit",
+    "repository-analysis",
+    "osint",
+    "verification",
+    "skill"
+  ]
+}
