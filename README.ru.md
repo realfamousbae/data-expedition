@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.webp" alt="Data Expedition" width="720">
+</p>
+
 # Data Expedition
 
 **Skill для Claude: глубокое расследование, которое доводит задачу до подробного ответа, подкреплённого доказательствами.**
@@ -118,6 +122,7 @@ skills/data-expedition/
   evals/
     evals.json                Тестовые задачи
     trigger-evals.json        Запросы для проверки срабатывания описания
+assets/banner.webp             Баннер проекта
 dist/data-expedition.skill    Готовый пакет для claude.ai
 scripts/build_skill.py        Валидация и сборка пакета .skill
 ```

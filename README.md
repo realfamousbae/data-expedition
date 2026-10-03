@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.webp" alt="Data Expedition" width="720">
+</p>
+
 # Data Expedition
 
 **A Claude skill for deep investigation: it carries a task all the way to a detailed, evidence-backed answer.**
@@ -118,6 +122,7 @@ skills/data-expedition/
   evals/
     evals.json                Task evals
     trigger-evals.json        Description-triggering queries
+assets/banner.webp             Project banner
 dist/data-expedition.skill    Prebuilt package for claude.ai
 scripts/build_skill.py        Validate and build the .skill package
 ```
