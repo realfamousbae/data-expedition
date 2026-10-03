@@ -49,6 +49,8 @@ Match effort to the request and the stakes; over-digging a simple question waste
 | **Survey** (default) | normal "investigate / explain / verify" | Plan, explore broadly, verify the load-bearing claims, full report |
 | **Expedition** | "go deep", "everything", "audit", high stakes, user signals thoroughness | Exhaustive coverage matrix, independent verification of every material claim, red-team pass, saturation stopping rule |
 
+This skill is deliberately token-hungry: planning, a ledger, full reads, verification, and a long report all load the session's context. For a simple lookup (find an article, a link, a one-line fact) the machinery is not worth it; answer directly or stay at Scout, and if the user invoked the skill by name on something that small, keep it minimal rather than staging a full expedition.
+
 If the user's wording suggests more thoroughness than the tier you picked, move up. You can always escalate mid-task when the first pass shows the problem is bigger than it looked. Say which tier you are using in the first line of your working notes so the user can redirect you.
 
 ### 3. Map - plan as hypotheses, not as searches
@@ -138,4 +140,4 @@ Depth is not license to cross lines. Whatever the mode:
 
 ## Model fit
 
-This skill is tuned for Opus and Fable class models: long autonomous horizons, strong tool use, and enough reasoning depth to run the ledger, verification, and self-audit loops without hand-holding. If you are running on a smaller model, prefer the Scout and Survey tiers, follow the checklists literally, shrink the scope instead of skipping verification, and say plainly when a question exceeds what you can verify.
+This skill is tuned for Opus and Fable class models: long autonomous horizons, strong tool use, and enough reasoning depth to run the ledger, verification, and self-audit loops without hand-holding. It also works on Sonnet, but its payoff grows with model capability: the stronger the model, the more reliably the loops hold over a long task. If you are running on a smaller model, prefer the Scout and Survey tiers, follow the checklists literally, shrink the scope instead of skipping verification, and say plainly when a question exceeds what you can verify.

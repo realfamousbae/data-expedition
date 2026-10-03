@@ -18,6 +18,23 @@ It has two modes that share one discipline:
 
 Deep tasks fail in predictable ways: stopping at the first plausible answer, summarizing search snippets, sounding more certain than the evidence allows, forgetting what was already ruled out, or quietly skipping the hard part. The skill is built to prevent each of those.
 
+## When to use it (and when not to)
+
+> **Token and context cost.** Using this skill can noticeably increase token consumption and load the context of the current session: it plans, keeps a ledger, reads real files and pages instead of snippets, verifies claims, and writes a detailed report. That is the point, but it makes the skill **impractical for tasks like "Find me an article about butterfly reproduction"**. A plain request like that does not need an expedition.
+>
+> Reach for it for the **toughest challenges and complex tasks** for frontier models with Opus- and Fable-level reasoning: deep audits, tracing a root cause through a large codebase, mapping a system, verifying a pile of claims against primary sources, digging for material that ordinary search misses.
+>
+> It also works with **Sonnet**, but the effect scales with the model: **the more capable the model you select, the more effective the skill becomes.**
+
+| Good fit | Poor fit |
+|---|---|
+| Audit a repository for security, dependency, and docs-vs-code problems | Find an article, a link, or a quick definition |
+| Trace why a job writes duplicate rows, across services and history | Explain what a single function does |
+| Fact-check a dozen statistics against primary sources | Look up one well-known fact |
+| Recover a deleted page and everything that still carries its content | Summarize a short document |
+
+If you have already invoked it on a small task, say "scout" (or "just answer directly") and it will keep the work minimal.
+
 ## How it works
 
 ```

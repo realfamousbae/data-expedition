@@ -4,6 +4,13 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-03
+
+### Changed
+- README (English and Russian): added a "When to use it (and when not to)" section on token and context cost,
+  recommended use for complex tasks, and model fit (Opus and Fable best, Sonnet supported, effect grows with model).
+- `SKILL.md`: added a cost note to the depth-tier section (keep simple lookups minimal) and a Sonnet note to "Model fit".
+
 ## [1.0.0] - 2026-10-03
 
 ### Added

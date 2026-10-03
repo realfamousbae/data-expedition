@@ -12,7 +12,7 @@
       "name": "data-expedition",
       "source": "./",
       "description": "Deep, evidence-backed investigation: exhaustive repository analysis and audits, deep web research, and rigorous fact-checking, carried through to a detailed answer.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "license": "MIT",
       "category": "research",
       "keywords": ["research", "fact-checking", "code-audit", "repository-analysis", "verification"]
