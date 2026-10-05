@@ -78,7 +78,7 @@ If you have already invoked it on a small task, say "scout" (or "just answer dir
 
 ## Installation
 
-### Claude Code: as a plugin (recommended)
+### Claude Code: as a plugin (recommended for Claude Code)
 
 ```
 /plugin marketplace add realfamousbae/data-expedition
@@ -139,7 +139,7 @@ Depth is not license to cross lines. The skill is **read-only by default** in yo
 
 ```
 .claude-plugin/
-  plugin.json                 Claude Code plugin manifest
+  plugin.json                 Claude Code plugin manifest (other agents only need skills/)
   marketplace.json            Single-plugin marketplace
 skills/data-expedition/
   SKILL.md                    Core workflow (loaded when the skill triggers)

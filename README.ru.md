@@ -78,7 +78,7 @@ Data Expedition заставляет ИИ-агента работать как �
 
 ## Установка
 
-### Claude Code: как плагин (рекомендуется)
+### Claude Code: как плагин (рекомендуется для Claude Code)
 
 ```
 /plugin marketplace add realfamousbae/data-expedition
@@ -139,7 +139,7 @@ Skill срабатывает автоматически, когда вы про�
 
 ```
 .claude-plugin/
-  plugin.json                 Манифест плагина Claude Code
+  plugin.json                 Манифест плагина Claude Code (другим агентам нужна только skills/)
   marketplace.json            Маркетплейс из одного плагина
 skills/data-expedition/
   SKILL.md                    Основной рабочий процесс (загружается при срабатывании)
