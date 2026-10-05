@@ -1,7 +1,7 @@
 ---
 name: data-expedition
-description: Deep, exhaustive investigation that carries a task all the way to a detailed, evidence-backed answer. Two modes. (1) Workspace and repository analysis - architecture, code paths, relationships and data flow between modules, audits (security, quality, dependencies, licensing, config drift, dead code), tracing "where is X used" and "why does Y happen", cross-file reasoning, log and dataset digging. (2) Web research - multi-source search, digging into deep and obscure pages (web archives, primary documents, registries, filings, forums, PDFs, changelogs), rigorous fact-checking and claim verification. Use whenever the user asks to investigate, dig into, audit, trace, verify, fact-check, map, find everything about, "go deep", "leave no stone unturned", or wants a thorough sourced answer instead of a quick one, even if they never say "research". Built for Claude Opus and Fable class models. Skip trivial one-shot lookups.
-compatibility: Designed for Claude Opus and Fable class models with extended reasoning. Uses whatever tools exist in the session (file search and read, shell, web search and fetch, browser tools, subagents) and degrades gracefully when some are missing.
+description: Deep, exhaustive investigation that carries a task all the way to a detailed, evidence-backed answer. Two modes. (1) Workspace and repository analysis - architecture, code paths, relationships and data flow between modules, audits (security, quality, dependencies, licensing, config drift, dead code), tracing "where is X used" and "why does Y happen", cross-file reasoning, log and dataset digging. (2) Web research - multi-source search, digging into deep and obscure pages (web archives, primary documents, registries, filings, forums, PDFs, changelogs), rigorous fact-checking and claim verification. Use whenever the user asks to investigate, dig into, audit, trace, verify, fact-check, map, find everything about, "go deep", "supercompute", "leave no stone unturned", or wants a thorough sourced answer instead of a quick one, even if they never say "research". Works in any agent that supports Agent Skills; best on frontier models with strong reasoning and tool use. Skip trivial one-shot lookups.
+compatibility: Agent-agnostic (Agent Skills format) - Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and other skills-compatible agents. Best on frontier models with extended reasoning. Uses whatever tools exist in the session (file search and read, shell, web search and fetch, browser tools, subagents) and degrades gracefully when some are missing.
 ---
 
 # Data Expedition
@@ -47,7 +47,7 @@ Match effort to the request and the stakes; over-digging a simple question waste
 |---|---|---|
 | **Scout** | "quick look", low stakes, narrow question | One pass, key sources only, answer with caveats |
 | **Survey** (default) | normal "investigate / explain / verify" | Plan, explore broadly, verify the load-bearing claims, full report |
-| **Expedition** | "go deep", "everything", "audit", high stakes, user signals thoroughness | Exhaustive coverage matrix, independent verification of every material claim, red-team pass, saturation stopping rule |
+| **Supercompute** | "supercompute", "go deep", "everything", "full expedition", "audit", high stakes, user signals thoroughness | Exhaustive coverage matrix, independent verification of every material claim, red-team pass, saturation stopping rule |
 
 This skill is deliberately token-hungry: planning, a ledger, full reads, verification, and a long report all load the session's context. For a simple lookup (find an article, a link, a one-line fact) the machinery is not worth it; answer directly or stay at Scout, and if the user invoked the skill by name on something that small, keep it minimal rather than staging a full expedition.
 
@@ -71,7 +71,7 @@ Build a **coverage matrix**: the list of places that could hold relevant evidenc
 
 ### 5. Keep the ledger
 
-Maintain a running **ledger** in a scratch file (use your scratchpad or working notes location, never pollute the user's repository unless asked). Template in `references/report-templates.md`. It holds:
+Maintain a running **ledger** in a scratch file (use your agent's scratchpad, temp, or working notes location, never pollute the user's repository unless asked). Template in `references/report-templates.md`. It holds:
 
 - the brief and hypotheses,
 - the **claim table** (each claim, status, evidence locator, confidence),
@@ -138,6 +138,8 @@ Depth is not license to cross lines. Whatever the mode:
 - Do not compile personal profiles of private individuals, locate people, or aggregate personal data. Public-interest facts about public roles and organizations are fine; dossiers on private people are not. For authorized security work, stay passive and in scope; no intrusion, scanning, or exploitation.
 - If a request seems aimed at harm (stalking, harassment, evasion of lawful controls), decline that part and explain briefly.
 
-## Model fit
+## Agent and model fit
 
-This skill is tuned for Opus and Fable class models: long autonomous horizons, strong tool use, and enough reasoning depth to run the ledger, verification, and self-audit loops without hand-holding. It also works on Sonnet, but its payoff grows with model capability: the stronger the model, the more reliably the loops hold over a long task. If you are running on a smaller model, prefer the Scout and Survey tiers, follow the checklists literally, shrink the scope instead of skipping verification, and say plainly when a question exceeds what you can verify.
+This skill is written for any agent that loads Agent Skills, whatever the vendor or model. Tool names differ between agents; map the generic actions here (search files, read a file, run a shell command, search the web, fetch a page, delegate to a subagent) onto whatever your environment provides, and skip or substitute what is missing. If your agent has no subagents, work the partitions yourself in sequence; if it has no web access, say so and stay in Workspace mode.
+
+The payoff grows with model capability: long autonomous horizons, strong tool use, and enough reasoning depth to run the ledger, verification, and self-audit loops without hand-holding. Frontier reasoning models get the most out of it. If you are running on a smaller or faster model, prefer the Scout and Survey tiers, follow the checklists literally, shrink the scope instead of skipping verification, and say plainly when a question exceeds what you can verify.

@@ -1,7 +1,7 @@
 <h1 align="center">Data Expedition</h1>
 
 <p align="center">
-  <b>Deep investigation for Claude Opus and Fable.</b><br>
+  <b>Deep investigation for any AI agent.</b><br>
   Repositories, the web, and facts, carried through to a detailed, evidence-backed answer.
 </p>
 
@@ -9,8 +9,8 @@
   <a href="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml"><img alt="CI" src="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-55c23a?labelColor=1b2a1f"></a>
   <img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Frealfamousbae/data-expedition%2Fmaster%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&color=55c23a&labelColor=1b2a1f">
-  <img alt="models" src="https://img.shields.io/badge/models-Opus%20%C2%B7%20Fable-55c23a?labelColor=1b2a1f">
-  <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-55c23a?labelColor=1b2a1f">
+  <img alt="format Agent Skills" src="https://img.shields.io/badge/format-Agent%20Skills-55c23a?labelColor=1b2a1f">
+  <img alt="agents" src="https://img.shields.io/badge/agents-Claude%20%C2%B7%20Codex%20%C2%B7%20Gemini%20%C2%B7%20Cursor%20%C2%B7%20Copilot-55c23a?labelColor=1b2a1f">
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 ---
 
-Data Expedition makes Claude work like a careful investigator instead of a fast summarizer. It targets **Claude Opus and Fable** class models, which have the autonomy, tool use, and reasoning depth to run long investigations without hand-holding.
+Data Expedition makes an AI agent work like a careful investigator instead of a fast summarizer. It is written in the open [Agent Skills](https://agentskills.io) format, so it runs in **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot**, and other skills-compatible agents, with any model that has the autonomy, tool use, and reasoning depth to run long investigations without hand-holding.
 
 It has two modes that share one discipline:
 
@@ -45,9 +45,9 @@ Deep tasks fail in predictable ways: stopping at the first plausible answer, sum
 
 > **Token and context cost.** Using this skill can noticeably increase token consumption and load the context of the current session: it plans, keeps a ledger, reads real files and pages instead of snippets, verifies claims, and writes a detailed report. That is the point, but it makes the skill **impractical for tasks like "Find me an article about butterfly reproduction"**. A plain request like that does not need an expedition.
 >
-> Reach for it for the **toughest challenges and complex tasks** for frontier models with Opus- and Fable-level reasoning: deep audits, tracing a root cause through a large codebase, mapping a system, verifying a pile of claims against primary sources, digging for material that ordinary search misses.
+> Reach for it for the **toughest challenges and complex tasks** for frontier reasoning models: deep audits, tracing a root cause through a large codebase, mapping a system, verifying a pile of claims against primary sources, digging for material that ordinary search misses.
 >
-> It also works with **Sonnet**, but the effect scales with the model: **the more capable the model you select, the more effective the skill becomes.**
+> It also works with smaller and faster models, but the effect scales with the model: **the more capable the model you select, the more effective the skill becomes.**
 
 | Good fit | Poor fit |
 |---|---|
@@ -61,7 +61,7 @@ If you have already invoked it on a small task, say "scout" (or "just answer dir
 ## How it works
 
 1. **Frame**: restate the question, scope, deliverable, and concrete "done" criteria. Ask the user only when blocked.
-2. **Depth tier**: *Scout* (quick), *Survey* (default), *Expedition* (exhaustive). Effort matches stakes.
+2. **Depth tier**: *Scout* (quick), *Survey* (default), *Supercompute* (exhaustive). Effort matches stakes.
 3. **Map**: plan as hypotheses, not searches; build a coverage matrix so "did I look everywhere?" has a real answer.
 4. **Explore**: breadth first, then deep; read the real files and pages, not snippets; parallelize independent work.
 5. **Ledger**: a running notes file holding claims, evidence locators, coverage, and dead ends, so nothing is lost when the context compacts.
@@ -97,9 +97,23 @@ cp -r skills/data-expedition ~/.claude/skills/
 mkdir -p .claude/skills && cp -r skills/data-expedition .claude/skills/
 ```
 
-### claude.ai: upload the packaged skill
+### Claude (claude.ai): upload the packaged skill
 
 Download [`dist/data-expedition.skill`](dist/data-expedition.skill) and upload it in **Settings, Skills** (the option to add a custom skill). The `.skill` file is a zip archive with the skill folder at its root.
+
+### Other agents: Codex, Gemini CLI, Cursor, GitHub Copilot, and more
+
+The skill uses the open [Agent Skills](https://agentskills.io) format (a folder with `SKILL.md`), so the same folder works in any [skills-compatible agent](https://agentskills.io/clients). The shared `.agents/skills/` location is read by Codex, Gemini CLI, Cursor, and VS Code / GitHub Copilot:
+
+```bash
+# personal (all projects)
+mkdir -p ~/.agents/skills && cp -r skills/data-expedition ~/.agents/skills/
+
+# or per project
+mkdir -p .agents/skills && cp -r skills/data-expedition .agents/skills/
+```
+
+Agent-specific folders also work (`.gemini/skills/`, `.cursor/skills/`, `.github/skills/`, `~/.copilot/skills/`); see your agent's documentation. Agents without skill support can still use it: point them at the file from your `AGENTS.md` (or equivalent instructions file), e.g. *"For deep investigations, follow `.agents/skills/data-expedition/SKILL.md` and load its `references/` as it instructs."*
 
 ## Usage
 
@@ -115,7 +129,7 @@ Fact-check this statistic thoroughly. Find where it started and give me a verdic
 Find everything publicly available about <topic>: archives, filings, forums. Go as deep as you can.
 ```
 
-To force a tier, say so: "quick scout", "survey", or "full expedition, leave no stone unturned".
+To force a tier, say so: "quick scout", "survey", or "supercompute, leave no stone unturned".
 
 ## Safety and boundaries
 
@@ -138,7 +152,7 @@ skills/data-expedition/
     evals.json                Task evals
     trigger-evals.json        Description-triggering queries
 assets/                       Banner and README graphics (generated SVGs)
-dist/data-expedition.skill    Prebuilt package for claude.ai
+dist/data-expedition.skill    Prebuilt package for claude.ai (other agents use the skill folder)
 scripts/build_skill.py        Validate and build the .skill package
 scripts/make_graphics.py      Regenerate the README SVG graphics
 SECURITY.md                   Security policy

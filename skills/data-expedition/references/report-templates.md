@@ -20,7 +20,7 @@ Keep it in a scratch location (the session scratchpad or notes area), not in the
 
 ```markdown
 # Expedition ledger: <short title>
-Date / as-of: <today>    Tier: <Scout|Survey|Expedition>    Mode: <Workspace|Web|Hybrid>
+Date / as-of: <today>    Tier: <Scout|Survey|Supercompute>    Mode: <Workspace|Web|Hybrid>
 
 ## Brief
 - Question:
@@ -181,7 +181,7 @@ For multi-claim inputs, keep one summary table and expand only the claims that n
 ## 9. Length, layering, and delivery
 
 - **Layer it**: a reader who stops after the bottom line should still be correctly informed; a reader who reads everything should be able to verify everything.
-- **Scale to the task**: Scout is a few paragraphs; Survey is a structured report; Expedition may run long, with an appendix for the evidence tables and search log. Long is acceptable when each part carries evidence; padding is not.
+- **Scale to the task**: Scout is a few paragraphs; Survey is a structured report; Supercompute may run long, with an appendix for the evidence tables and search log. Long is acceptable when each part carries evidence; padding is not.
 - **Deliver the answer in the reply.** If the full report is very long (roughly beyond 2,000 words) or the user would benefit from a file, also save it to a location the user can open (the working directory or the designated deliverables directory) and still give the bottom line and key findings in the reply.
 - **Use the user's language** for prose; keep identifiers, paths, URLs, and quotations verbatim.
 - **Tables for comparisons and findings, prose for reasoning.** Avoid decorative formatting.

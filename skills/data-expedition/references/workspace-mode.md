@@ -21,7 +21,7 @@ Spend the first few minutes learning the terrain; it pays back many times over.
 
 - **Layout**: list the top two or three levels of the tree. Identify source, tests, docs, config, scripts, infra, generated and vendored directories (`node_modules`, `vendor`, `dist`, `build`, `.venv`, `target`). Know what to skip and what to read.
 - **Manifests and entry points**: `package.json`, `pyproject.toml`, `go.mod`, `Cargo.toml`, `pom.xml`, `Makefile`, `Dockerfile`, CI workflows, `main`/`index`/`app` files, CLI definitions, route tables, job schedulers.
-- **Orientation docs**: README, CONTRIBUTING, ARCHITECTURE, ADRs, `docs/`, CLAUDE.md or similar. Treat them as claims to verify, not as truth; docs drift.
+- **Orientation docs**: README, CONTRIBUTING, ARCHITECTURE, ADRs, `docs/`, agent instruction files (AGENTS.md, CLAUDE.md, GEMINI.md, `.cursor/rules`, `.github/copilot-instructions.md`) or similar. Treat them as claims to verify, not as truth; docs drift.
 - **Size and language mix**: file counts and line counts per directory (`git ls-files | xargs wc -l` or equivalent) to decide the tier and the partitioning.
 - **Recent activity**: `git log --oneline -n 30`, branches, tags, which areas change most. Hot areas deserve more scrutiny.
 - **Tests**: where they live and what they cover. Tests are executable specifications; read them to learn intended behavior.
@@ -75,7 +75,7 @@ Code shows what, history often shows why.
 
 ## 6. Audits (checklists by type)
 
-Pick the types the request implies; for "audit everything" at Expedition tier, run all that apply. Each finding needs: location, what is wrong, why it matters, evidence, severity, and a suggested fix. Severity scale: **Critical** (exploitable or data-loss now), **High**, **Medium**, **Low**, **Info**. Include confidence separately from severity.
+Pick the types the request implies; for "audit everything" at Supercompute tier, run all that apply. Each finding needs: location, what is wrong, why it matters, evidence, severity, and a suggested fix. Severity scale: **Critical** (exploitable or data-loss now), **High**, **Medium**, **Low**, **Info**. Include confidence separately from severity.
 
 **Security**
 - Secrets in code, history, configs, CI logs, examples (`git log -p -S` on suspicious patterns; mask values in the report).

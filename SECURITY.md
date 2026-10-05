@@ -1,6 +1,6 @@
 # Security policy
 
-Data Expedition is a set of instructions (a Claude skill) plus a small build script. It contains no runtime service,
+Data Expedition is a set of instructions (a skill in the open Agent Skills format, usable in Claude Code, Codex, Gemini CLI, Cursor, Copilot and other agents) plus a small build script. It contains no runtime service,
 but security still matters: the skill guides an agent that can read files, run commands, and browse the web.
 
 ## What counts as a security issue

@@ -1,7 +1,7 @@
 {
   "name": "data-expedition",
-  "version": "1.0.1",
-  "description": "Deep, evidence-backed investigation for Claude Opus and Fable: exhaustive repository and workspace analysis, audits, deep web research, and rigorous fact-checking, carried through to a detailed answer.",
+  "version": "1.1.0",
+  "description": "Deep, evidence-backed investigation for any AI agent (Agent Skills format): exhaustive repository and workspace analysis, audits, deep web research, and rigorous fact-checking, carried through to a detailed answer.",
   "author": {
     "name": "realfamousbae",
     "url": "https://github.com/realfamousbae"

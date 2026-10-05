@@ -21,7 +21,7 @@
       "expected_output": "An audit report with a findings summary table (severity and confidence as separate columns), per-finding location, impact, evidence, fix, and a coverage section listing audit types run and areas skipped. Secrets masked.",
       "files": [],
       "expectations": [
-        "Uses the Expedition tier behavior: coverage matrix and per-area status",
+        "Uses the Supercompute tier behavior: coverage matrix and per-area status",
         "Findings table has severity and confidence as separate fields",
         "Each finding has location, evidence, impact, and a concrete fix",
         "Any secret found is masked in the output",

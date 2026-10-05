@@ -1,7 +1,7 @@
 <h1 align="center">Data Expedition</h1>
 
 <p align="center">
-  <b>Глубокое расследование для Claude Opus и Fable.</b><br>
+  <b>Глубокое расследование для любого ИИ-агента.</b><br>
   Репозитории, веб и факты: до подробного ответа с доказательствами.
 </p>
 
@@ -9,8 +9,8 @@
   <a href="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml"><img alt="CI" src="https://github.com/realfamousbae/data-expedition/actions/workflows/validate.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-55c23a?labelColor=1b2a1f"></a>
   <img alt="version" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Frealfamousbae/data-expedition%2Fmaster%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&color=55c23a&labelColor=1b2a1f">
-  <img alt="models" src="https://img.shields.io/badge/models-Opus%20%C2%B7%20Fable-55c23a?labelColor=1b2a1f">
-  <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-55c23a?labelColor=1b2a1f">
+  <img alt="format Agent Skills" src="https://img.shields.io/badge/format-Agent%20Skills-55c23a?labelColor=1b2a1f">
+  <img alt="agents" src="https://img.shields.io/badge/agents-Claude%20%C2%B7%20Codex%20%C2%B7%20Gemini%20%C2%B7%20Cursor%20%C2%B7%20Copilot-55c23a?labelColor=1b2a1f">
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 ---
 
-Data Expedition заставляет Claude работать как внимательный исследователь, а не как быстрый «пересказчик». Skill рассчитан на модели класса **Claude Opus и Fable**: у них достаточно автономности, навыков работы с инструментами и глубины рассуждений, чтобы вести долгие расследования без подсказок.
+Data Expedition заставляет ИИ-агента работать как внимательный исследователь, а не как быстрый «пересказчик». Skill написан в открытом формате [Agent Skills](https://agentskills.io), поэтому работает в **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot** и других агентах с поддержкой skills — с любой моделью, у которой достаточно автономности, навыков работы с инструментами и глубины рассуждений, чтобы вести долгие расследования без подсказок.
 
 Два режима с единой дисциплиной:
 
@@ -45,9 +45,9 @@ Data Expedition заставляет Claude работать как внимат
 
 > **Расход токенов и нагрузка на контекст.** Использование skill может повысить потребление токенов и нагрузить контекст текущей сессии: он планирует, ведёт журнал, читает настоящие файлы и страницы вместо сниппетов, проверяет утверждения и пишет подробный отчёт. В этом и смысл, но поэтому запускать skill для задач уровня **«Найди мне статью про размножение бабочек» нецелесообразно** — такой простой запрос не требует экспедиции.
 >
-> Он пригодится для самых **«toughest challenges» и «complex tasks»** для frontier-моделей с мышлением уровня Opus и Fable: глубокие аудиты, поиск первопричины в большой кодовой базе, карта системы, проверка множества утверждений по первоисточникам, поиск материалов, которые обычный поиск не находит.
+> Он пригодится для самых **«toughest challenges» и «complex tasks»** для frontier-моделей с сильным мышлением: глубокие аудиты, поиск первопричины в большой кодовой базе, карта системы, проверка множества утверждений по первоисточникам, поиск материалов, которые обычный поиск не находит.
 >
-> Для модели **Sonnet** тоже подойдёт, но **эффективность становится выше, чем выше выбрана модель.**
+> С более лёгкими и быстрыми моделями тоже подойдёт, но **эффективность становится выше, чем выше выбрана модель.**
 
 | Подходит | Не подходит |
 |---|---|
@@ -61,7 +61,7 @@ Data Expedition заставляет Claude работать как внимат
 ## Как это работает
 
 1. **Рамка**: переформулировать вопрос, границы, формат результата и конкретные критерии «готово». Вопросы пользователю — только если без них не обойтись.
-2. **Уровень глубины**: *Scout* (быстро), *Survey* (по умолчанию), *Expedition* (исчерпывающе). Усилия соответствуют ставкам.
+2. **Уровень глубины**: *Scout* (быстро), *Survey* (по умолчанию), *Supercompute* (исчерпывающе). Усилия соответствуют ставкам.
 3. **Карта**: план в виде гипотез, а не поисковых запросов; матрица покрытия, чтобы на вопрос «везде ли я посмотрел?» был настоящий ответ.
 4. **Исследование**: сначала вширь, потом вглубь; читать настоящие файлы и страницы, а не сниппеты; независимую работу распараллеливать.
 5. **Журнал (ledger)**: рабочий файл заметок с утверждениями, ссылками на доказательства, покрытием и тупиками, чтобы ничего не терялось при сжатии контекста.
@@ -97,9 +97,23 @@ cp -r skills/data-expedition ~/.claude/skills/
 mkdir -p .claude/skills && cp -r skills/data-expedition .claude/skills/
 ```
 
-### claude.ai: загрузка готового пакета
+### Claude (claude.ai): загрузка готового пакета
 
 Скачайте [`dist/data-expedition.skill`](dist/data-expedition.skill) и загрузите его в **Settings, Skills** (добавление собственного skill). Файл `.skill` — это zip-архив с папкой skill в корне.
+
+### Другие агенты: Codex, Gemini CLI, Cursor, GitHub Copilot и другие
+
+Skill использует открытый формат [Agent Skills](https://agentskills.io) (папка с `SKILL.md`), поэтому одна и та же папка работает в любом [агенте с поддержкой skills](https://agentskills.io/clients). Общую директорию `.agents/skills/` читают Codex, Gemini CLI, Cursor и VS Code / GitHub Copilot:
+
+```bash
+# личная (для всех проектов)
+mkdir -p ~/.agents/skills && cp -r skills/data-expedition ~/.agents/skills/
+
+# или в конкретный проект
+mkdir -p .agents/skills && cp -r skills/data-expedition .agents/skills/
+```
+
+Подходят и собственные папки агентов (`.gemini/skills/`, `.cursor/skills/`, `.github/skills/`, `~/.copilot/skills/`) — смотрите документацию своего агента. Агенту без поддержки skills можно указать файл в `AGENTS.md` (или аналогичном файле инструкций), например: *«Для глубоких расследований следуй `.agents/skills/data-expedition/SKILL.md` и подгружай его `references/`, как там описано»*.
 
 ## Использование
 
@@ -115,7 +129,7 @@ Skill срабатывает автоматически, когда вы про�
 Найди всё, что публично известно про <тема>: архивы, отчётность, форумы. Копай как можно глубже.
 ```
 
-Чтобы задать уровень, скажите прямо: «быстро, scout», «survey» или «полная экспедиция, ничего не упусти».
+Чтобы задать уровень, скажите прямо: «быстро, scout», «survey» или «supercompute, ничего не упусти».
 
 ## Безопасность и границы
 
@@ -138,7 +152,7 @@ skills/data-expedition/
     evals.json                Тестовые задачи
     trigger-evals.json        Запросы для проверки срабатывания описания
 assets/                       Баннер и графика README (генерируемые SVG)
-dist/data-expedition.skill    Готовый пакет для claude.ai
+dist/data-expedition.skill    Готовый пакет для claude.ai (другим агентам нужна папка skill)
 scripts/build_skill.py        Валидация и сборка пакета .skill
 scripts/make_graphics.py      Пересборка SVG-графики README
 SECURITY.md                   Политика безопасности
